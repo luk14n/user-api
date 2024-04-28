@@ -5,7 +5,7 @@ import jakarta.validation.ConstraintValidatorContext;
 
 public class CustomEmailValidator implements
         ConstraintValidator<EmailConstraint, String> {
-    public static final String EMAIL_REGEXP = "^.+@.+\\S+$";
+    public static final String EMAIL_REGEXP = "^\\S+@\\S+\\.\\S+$";
 
     @Override
     public void initialize(EmailConstraint email) {

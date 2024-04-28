@@ -8,7 +8,6 @@ import com.lukian.userapi.mapper.UserMapper;
 import com.lukian.userapi.model.User;
 import com.lukian.userapi.repository.UserRepository;
 import com.lukian.userapi.service.UserService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -60,9 +59,9 @@ public class UserServiceImpl implements UserService {
     private void validateAge(UserRegisterRequestDto requestDto) {
         LocalDate currentDate = LocalDate.now();
         LocalDate userBirthDate = requestDto.birthDate();
-        Period UserAge = Period.between(userBirthDate, currentDate);
+        Period userAge = Period.between(userBirthDate, currentDate);
 
-        if (UserAge.getYears() < minUserAge) {
+        if (userAge.getYears() < minUserAge) {
             throw new RegistrationException(
                     "User must be at least "
                             + minUserAge

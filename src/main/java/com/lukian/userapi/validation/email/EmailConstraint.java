@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 
 public @interface EmailConstraint {
-    String message() default "invalid format";
+    String message() default "invalid email format";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
