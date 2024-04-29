@@ -3,7 +3,6 @@ package com.lukian.userapi.service;
 import com.lukian.userapi.dto.UpdateUserRequestDto;
 import com.lukian.userapi.dto.UserRegisterRequestDto;
 import com.lukian.userapi.dto.UserResponseDto;
-
 import java.time.LocalDate;
 import java.util.List;
 

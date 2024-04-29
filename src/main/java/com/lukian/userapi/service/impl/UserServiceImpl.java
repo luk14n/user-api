@@ -8,12 +8,12 @@ import com.lukian.userapi.mapper.UserMapper;
 import com.lukian.userapi.model.User;
 import com.lukian.userapi.repository.UserRepository;
 import com.lukian.userapi.service.UserService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
@@ -75,3 +75,4 @@ public class UserServiceImpl implements UserService {
                         "Cannot find user by id: " + id));
     }
 }
+

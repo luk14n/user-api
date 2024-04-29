@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users
+      author: lukian
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: email, value: 'user1@example.com' }
+              - column: { name: first_name, value: 'John' }
+              - column: { name: last_name, value: 'Doe' }
+              - column: { name: birth_date, valueDate: '1990-01-01' }
+              - column: { name: address, value: '123 Main St' }
+              - column: { name: phone_number, value: '123-456-7890' }
+              - column: { name: is_deleted, valueBoolean: false }
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: id, valueNumeric: 2 }
+              - column: { name: email, value: 'user2@example.com' }
+              - column: { name: first_name, value: 'Jane' }
+              - column: { name: last_name, value: 'Smith' }
+              - column: { name: birth_date, valueDate: '1995-05-15' }
+              - column: { name: address, value: '456 Oak St' }
+              - column: { name: phone_number, value: '555-123-4567' }
+              - column: { name: is_deleted, valueBoolean: false }
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: id, valueNumeric: 3 }
+              - column: { name: email, value: 'user3@example.com' }
+              - column: { name: first_name, value: 'Emily' }
+              - column: { name: last_name, value: 'Johnson' }
+              - column: { name: birth_date, valueDate: '1985-10-20' }
+              - column: { name: address, value: '789 Elm St' }
+              - column: { name: phone_number, value: '777-987-6543' }
+              - column: { name: is_deleted, valueBoolean: false }
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: id, valueNumeric: 4 }
+              - column: { name: email, value: 'user4@example.com' }
+              - column: { name: first_name, value: 'Michael' }
+              - column: { name: last_name, value: 'Brown' }
+              - column: { name: birth_date, valueDate: '1980-03-12' }
+              - column: { name: address, value: '321 Pine St' }
+              - column: { name: phone_number, value: '999-555-4321' }
+              - column: { name: is_deleted, valueBoolean: false }
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: id, valueNumeric: 5 }
+              - column: { name: email, value: 'user5@example.com' }
+              - column: { name: first_name, value: 'Sarah' }
+              - column: { name: last_name, value: 'Lee' }
+              - column: { name: birth_date, valueDate: '1998-08-25' }
+              - column: { name: address, value: '555 Maple St' }
+              - column: { name: phone_number, value: '111-222-3333' }
+              - column: { name: is_deleted, valueBoolean: false }
