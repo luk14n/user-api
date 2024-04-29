@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserResponseDto updateUserDataById(Long id, UserRegisterRequestDto requestDto) {
+        validateAge(requestDto);
         User userFromDb = getUserFromDb(id);
         userMapper.updateFromDto(requestDto, userFromDb);
         return userMapper.toDto(userRepository.save(userFromDb));
